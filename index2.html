@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>EUPHORIA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f7cac9;
+    }
+    .nav {
+      background: #3c2c2c;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+    }
+    .nav .callback-btn {
+      margin-right: auto;
+      font-weight: bold;
+      background: black;
+      padding: 5px 15px;
+      border-radius: 15px;
+    }
+    header {
+      text-align: center;
+      padding: 20px 0;
+      font-size: 32px;
+      color: black;
+      font-weight: bold;
+    }
+    .section-title {
+      text-align: center;
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+    .service-block {
+      max-width: 800px;
+      margin: 0 auto 40px;
+      background-color: #f7cac9;
+      padding: 0 20px;
+    }
+    .service-block h3 {
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    .service-block img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 15px auto;
+      border-radius: 5px;
+      transition: transform 0.3s ease;
+    }
+     .service-block img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    .service-block p {
+      text-align: left;
+      margin: 5px 0 10px;
+    }
+    @media (max-width: 768px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav a {
+        margin: 5px 0 0 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="nav">
+    <a href="#" class="callback-btn">ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК</a>
+    <a href="index2.html">Услуги</a>
+    <a href="index.html">Мастера</a>
+    <a href="Cert.html">Сертификаты</a>
+  </div>
+
+  <header>EUPHORIA</header>
+
+  <div class="section-title">УСЛУГИ И ЦЕНЫ</div>
+
+  <div class="service-block">
+    <h3>ТАТУИРОВКА</h3>
+    <img src="img/tattoo.jpg" alt="Татуировка">
+    <p>Художественная татуировка от профессиональных тату мастеров</p>
+    <p><strong>Цены:</strong><br>
+    Миниатюрная от 2000<br>
+    Средняя от 4000<br>
+    Большая от 7000</p>
+  </div>
+
+  <div class="service-block">
+    <h3>РАЗРАБОТКА ЭСКИЗА</h3>
+    <img src="img/eskiz.jpg" alt="Эскиз">
+    <p>Разработка эскиза по вашему запросу или от наших тату мастеров</p>
+    <p><strong>Цены:</strong><br>
+    Стоимость от 500 рублей<br>
+    Консультация бесплатно</p>
+  </div>
+
+  <div class="service-block">
+    <h3>ЛАЗЕРНОЕ УДАЛЕНИЕ ТАТУ</h3>
+    <img src="img/laser.jpg" alt="Удаление тату">
+    <p>Метод удаления татуировки с помощью лазера, работающий путем удаления пигмента на мелкие частицы</p>
+    <p><strong>Цены:</strong><br>
+    Удаление от 3000</p>
+  </div>
+
+  <div class="service-block">
+    <h3>ПЕРЕКРЫТИЕ И КОРРЕКЦИЯ ТАТУ</h3>
+    <img src="img/ink.jpg" alt="Коррекция тату">
+    <p><strong>Цены:</strong><br>
+    - Перекрытие шрамов от 2000<br>
+    - Перекрытие старой татуировки от 3000<br>
+    - Коррекция зажившей татуировки от 1000</p>
+  </div>
+
+  <div id="callbackModal" style="display: none; position: fixed; top: 0; left: 0;
+      width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6);
+      align-items: center; justify-content: center; z-index: 1000;">
+    <div style="background: #f7cac9; padding: 25px; border-radius: 15px; width: 90%; max-width: 400px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.4); font-family: Arial, sans-serif;">
+      <h2 style="margin-top: 0; color: #3c2c2c; text-align: center;">Заказать звонок</h2>
+      <form id="callbackForm">
+          <label for="nameInput" style="font-weight: bold;">Имя:</label>
+          <input type="text" id="nameInput" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 8px;"><br>
+          
+          <label for="phoneInput" style="font-weight: bold;">Телефон:</label>
+          <input type="text" id="phoneInput" required style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 8px;"><br>
+          
+          <div style="display: flex; justify-content: space-between;">
+              <button type="submit" style="flex: 1; background: #3c2c2c; color: white; padding: 10px; border: none; border-radius: 8px; cursor: pointer;">Отправить</button>
+              <button type="button" onclick="closeModal()" style="flex: 1; margin-left: 10px; background: #ffffff; color: #3c2c2c; padding: 10px; border: none; border-radius: 8px; cursor: pointer;">Отмена</button>
+          </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="thanksModal" style="display: none; position: fixed; top: 0; left: 0;
+      width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6);
+      align-items: center; justify-content: center; z-index: 1000;">
+    <div style="background: #f7cac9; padding: 30px; border-radius: 15px; width: 90%; max-width: 400px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.4); font-family: Arial, sans-serif; text-align: center;">
+      <h2 style="color: #3c2c2c;">Спасибо!</h2>
+      <p style="font-size: 18px;">Мы вам перезвоним</p>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById('callbackModal');
+    const thanksModal = document.getElementById('thanksModal');
+    const form = document.getElementById('callbackForm');
+
+    document.querySelector('.callback-btn')?.addEventListener('click', () => {
+      modal.style.display = 'flex';
+    });
+
+    function closeModal() {
+      modal.style.display = 'none';
+    }
+
+    function showThanksModal() {
+      thanksModal.style.display = 'flex';
+      setTimeout(() => {
+        thanksModal.style.display = 'none';
+      }, 3000);
+    }
+
+    form?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('nameInput').value;
+      const phone = document.getElementById('phoneInput').value;
+      const text = `Имя: ${name}\nТелефон: ${phone}\nДата: ${new Date().toLocaleString()}`;
+      const blob = new Blob([text], { type: 'text/plain' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = `заявка_${Date.now()}.txt`;
+      link.click();
+      closeModal();
+      form.reset();
+      setTimeout(showThanksModal, 300);
+    });
+  </script>
+	<footer style="background: #3c2c2c; color: white; padding: 20px 0; margin-top: 40px;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+        <div style="font-weight: bold;">EUPHORIA</div>
+        <div>
+            <a href="#" style="color: white; text-decoration: none; margin-left: 15px;">Заказать звонок</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

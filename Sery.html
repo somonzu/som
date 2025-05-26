@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Портфолио | EUPHORIA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f7cac9;
+    }
+    .nav {
+      background: #3c2c2c;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+    }
+    .nav .callback-btn {
+      margin-right: auto;
+      font-weight: bold;
+    }
+    header {
+      text-align: center;
+      padding: 20px 0;
+      font-size: 32px;
+      color: black;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+      flex: 1;
+    }
+    .section-title {
+      font-weight: bold;
+      font-size: 18px;
+      margin: 40px 0 20px;
+      text-align: center;
+    }
+.master-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto; 
+  max-width: 700px;
+}
+
+.master-info img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  margin: 0 auto 15px; 
+  display: block; 
+  transition: all 0.3s ease; 
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+
+.master-info img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
+}
+
+.master-info p {
+  max-width: 700px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+  padding: 10px;
+}
+
+.grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  object-fit: cover;
+  aspect-ratio: 1/1; 
+}
+
+.grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  z-index: 1;
+  position: relative;
+    }
+.gallery-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 40px 0 20px;
+  text-align: center;
+}
+ .gallery-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .gallery-grid img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+.gallery-grid img:hover {
+  transform: scale(1.03);
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  position: relative;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%;
+}
+
+footer {
+  background: #3c2c2c;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  width: 100%;
+  margin-top: auto;
+  </style>
+</head>
+<body>
+
+  <div class="nav">
+    <a href="#" class="callback-btn">ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК</a>
+    <a href="index2.html">Услуги</a>
+    <a href="index.html">Мастера</a>
+    <a href="Cert.html">Сертификаты</a>
+  </div>
+
+  <header>EUPHORIA</header>
+
+  <div class="container">
+    <div class="section-title">МАСТЕРА</div>
+    <div class="master-info">
+      <img src="img/Card6.png" alt="Мастер Сергей">
+      <p>
+        Мастер Сергей<br>
+        Работает в сфере тату уже 9 лет. Любимый стиль –  Минимализм, Очень профессионально подходит к разработке эскиза.<br><br>
+        <strong>Стоимость работ:</strong><br>
+        Работает как с миниатюрными, так и с большими татуировками от 3000
+      </p>
+    </div>
+
+    <div class="section-title">ПОРТФОЛИО МАСТЕРА</div>
+    <div class="grid">
+      <img src="img/Card40.png" alt="Тату 1">
+      <img src="img/Card41.png" alt="Тату 2">
+      <img src="img/Card42.png" alt="Тату 3">
+      <img src="img/Card43.png" alt="Тату 4">
+    </div>
+
+     <div class="gallery-title">ГАЛЕРЕЯ</div>
+    <div class="gallery-grid">
+      <img src="img/gal1.jpg" alt="Галерея 1">
+    </div>
+  </div>
+
+  <footer>
+    <div>EUPHORIA</div>
+    <div><a href="#" style="color:white;text-decoration:none;">Заказать обратный звонок</a></div>
+  </footer>
+<!-- Модальное окно "Заказать звонок" -->
+<div id="callbackModal" style="display: none; position: fixed; top: 0; left: 0;
+    width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6);
+    align-items: center; justify-content: center; z-index: 1000;">
+  <div style="background: #f7cac9; padding: 25px; border-radius: 15px; width: 90%; max-width: 400px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4); font-family: Arial, sans-serif;">
+    <h2 style="margin-top: 0; color: #3c2c2c; text-align: center;">Заказать звонок</h2>
+    <form id="callbackForm">
+        <label for="nameInput" style="font-weight: bold;">Имя:</label>
+        <input type="text" id="nameInput" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 8px;"><br>
+        
+        <label for="phoneInput" style="font-weight: bold;">Телефон:</label>
+        <input type="text" id="phoneInput" required style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 8px;"><br>
+        
+        <div style="display: flex; justify-content: space-between;">
+            <button type="submit" style="flex: 1; background: #3c2c2c; color: white; padding: 10px; border: none; border-radius: 8px; cursor: pointer;">Отправить</button>
+            <button type="button" onclick="closeModal()" style="flex: 1; margin-left: 10px; background: #ffffff; color: #3c2c2c; padding: 10px; border: none; border-radius: 8px; cursor: pointer;">Отмена</button>
+        </div>
+    </form>
+  </div>
+</div>
+
+<!-- Модальное окно "Спасибо" -->
+<div id="thanksModal" style="display: none; position: fixed; top: 0; left: 0;
+    width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6);
+    align-items: center; justify-content: center; z-index: 1000;">
+  <div style="background: #f7cac9; padding: 30px; border-radius: 15px; width: 90%; max-width: 400px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4); font-family: Arial, sans-serif; text-align: center;">
+    <h2 style="color: #3c2c2c;">Спасибо!</h2>
+    <p style="font-size: 18px;">Мы вам перезвоним</p>
+  </div>
+</div>
+
+<!-- Скрипт -->
+<script>
+    const modal = document.getElementById('callbackModal');
+    const thanksModal = document.getElementById('thanksModal');
+    const form = document.getElementById('callbackForm');
+
+    // Открытие окна при клике
+    document.querySelector('.callback-btn').addEventListener('click', () => {
+        modal.style.display = 'flex';
+    });
+
+    // Закрытие окна
+    function closeModal() {
+        modal.style.display = 'none';
+    }
+
+    // Показываем "Спасибо"
+    function showThanksModal() {
+        thanksModal.style.display = 'flex';
+        setTimeout(() => {
+            thanksModal.style.display = 'none';
+        }, 3000);
+    }
+
+    // Обработка формы
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('nameInput').value;
+        const phone = document.getElementById('phoneInput').value;
+        const text = `Имя: ${name}\nТелефон: ${phone}\nДата: ${new Date().toLocaleString()}`;
+
+        // Скачиваем .txt файл
+        const blob = new Blob([text], { type: 'text/plain' });
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = `заявка_${Date.now()}.txt`;
+        link.click();
+
+        closeModal();
+        form.reset();
+
+        // Показываем спасибо через 0.3 сек
+        setTimeout(showThanksModal, 300);
+    });
+</script>
+
+</body>
+</html>

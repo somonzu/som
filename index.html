@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EUPHORIA</title>
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: #f7cac9;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background: #3c2c2c;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: auto;
+            padding: 0 15px;
+        }
+        .section {
+            padding: 20px 0;
+        }
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .grid > div, .grid > img {
+            flex: 1 1 calc(25% - 20px);
+            min-width: 200px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+         }
+           img:hover {
+            transform: scale(1.05);
+        }
+        .masters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .master {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            flex: 1 1 calc(50% - 20px);
+            min-width: 250px;
+        }
+        .map {
+            width: 100%;
+            height: 300px;
+            background: grey;
+        }
+        .nav {
+            background: #3c2c2c;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+        }
+        .callback-btn {
+            background: black;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-weight: bold;
+            margin-right: auto;
+        }
+        .portfolio-button {
+            background: #ff9e9e;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                flex-direction: column;
+            }
+            .master {
+                width: 100%;
+            }
+            .nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav">
+        <a href="#" class="callback-btn">Заказать обратный звонок</a>
+        <div class="nav-links">
+            <a href="index2.html">Услуги</a>
+            <a href="#masters">Мастера</a>
+            <a href="Cert.html">Сертификаты</a>
+        </div>
+    </div>
+
+    <div class="header">EUPHORIA</div>
+
+    <div class="container">
+        <div class="section">
+            <div class="imagine">
+                <img src="img/card.png" alt="Декоративное изображение">
+                <h2>Услуги и цены</h2>
+                <div class="grid">
+                    <div><img src="img/Card2.PNG" alt="Татуировка"><p>Татуировка от 2000 руб.</p></div>
+                    <div><img src="img/Card11.PNG" alt="Эскиз"><p>Разработка эскиза от 500 руб.</p></div>
+                    <div><img src="img/card9.PNG" alt="Удаление"><p>Удаление тату от 3000 руб.</p></div>
+                    <div><img src="img/card10.PNG" alt="Коррекция"><p>Коррекция от 1000 руб.</p></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Галерея</h2>
+            <div class="grid">
+                <img src="img/Card3.png" alt="Татуировка">
+                <img src="img/Card15.png" alt="Татуировка">
+                <img src="img/Card16.png" alt="Татуировка">
+            </div>
+        </div>
+
+        <div class="section" id="masters">
+            <h2>Мастера</h2>
+            <div class="masters">
+                <div class="master">
+                    <img src="img/Card4.png" alt="Екатерина">
+                    <p>Екатерина - 7 лет опыта, Реализм</p>
+                    <a href="Ekaterina.html" class="portfolio-button">Портфолио</a>
+                </div>
+                <div class="master">
+                    <img src="img/Card6.png" alt="Сергей">
+                    <p>Сергей - 5 лет опыта, Минимализм</p>
+                    <a href="Sery.html" class="portfolio-button">Портфолио</a>
+                </div>
+                <div class="master">
+                    <img src="img/Card5.png" alt="Надежда">
+                    <p>Надежда - 4 года опыта, Акварель</p>
+                    <a href="Nadya.html" class="portfolio-button">Портфолио</a>
+                </div>
+                <div class="master">
+                    <img src="img/Card7.png" alt="Михаил">
+                    <p>Михаил - 6 лет опыта, Орнаментал</p>
+                    <a href="Miha.html" class="portfolio-button">Портфолио</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Подарочные сертификаты</h2>
+            <div class="grid">
+                <img src="img/Card14.png" alt="Сертификат">
+                <img src="img/Card12.png" alt="Сертификат">
+                <img src="img/Card13.png" alt="Сертификат">
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Карта</h2>
+            <img src="img/Card8.png" alt="Карта">
+            <p>Адрес: Площадь Ленина, 8 - Боткинская ул., 2 - Финский пер.</p>
+        </div>
+    </div>
+	 
+<!-- Модальное окно "Заказать звонок" -->
+<div id="callbackModal" style="display: none; position: fixed; top: 0; left: 0;
+    width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6);
+    align-items: center; justify-content: center; z-index: 1000;">
+  <div style="background: #f7cac9; padding: 25px; border-radius: 15px; width: 90%; max-width: 400px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4); font-family: Arial, sans-serif;">
+    <h2 style="margin-top: 0; color: #3c2c2c; text-align: center;">Заказать звонок</h2>
+    <form id="callbackForm">
+        <label for="nameInput" style="font-weight: bold;">Имя:</label>
+        <input type="text" id="nameInput" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 8px;"><br>
+        
+        <label for="phoneInput" style="font-weight: bold;">Телефон:</label>
+        <input type="text" id="phoneInput" required style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 8px;"><br>
+        
+        <div style="display: flex; justify-content: space-between;">
+            <button type="submit" style="flex: 1; background: #3c2c2c; color: white; padding: 10px; border: none; border-radius: 8px; cursor: pointer;">Отправить</button>
+            <button type="button" onclick="closeModal()" style="flex: 1; margin-left: 10px; background: #ffffff; color: #3c2c2c; padding: 10px; border: none; border-radius: 8px; cursor: pointer;">Отмена</button>
+        </div>
+    </form>
+  </div>
+</div>
+
+<!-- Модальное окно "Спасибо" -->
+<div id="thanksModal" style="display: none; position: fixed; top: 0; left: 0;
+    width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6);
+    align-items: center; justify-content: center; z-index: 1000;">
+  <div style="background: #f7cac9; padding: 30px; border-radius: 15px; width: 90%; max-width: 400px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4); font-family: Arial, sans-serif; text-align: center;">
+    <h2 style="color: #3c2c2c;">Спасибо!</h2>
+    <p style="font-size: 18px;">Мы вам перезвоним</p>
+  </div>
+</div>
+
+<!-- Скрипт -->
+<script>
+    const modal = document.getElementById('callbackModal');
+    const thanksModal = document.getElementById('thanksModal');
+    const form = document.getElementById('callbackForm');
+
+    // Открытие окна при клике
+    document.querySelector('.callback-btn').addEventListener('click', () => {
+        modal.style.display = 'flex';
+    });
+
+    // Закрытие окна
+    function closeModal() {
+        modal.style.display = 'none';
+    }
+
+    // Показываем "Спасибо"
+    function showThanksModal() {
+        thanksModal.style.display = 'flex';
+        setTimeout(() => {
+            thanksModal.style.display = 'none';
+        }, 3000);
+    }
+
+    // Обработка формы
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('nameInput').value;
+        const phone = document.getElementById('phoneInput').value;
+        const text = `Имя: ${name}\nТелефон: ${phone}\nДата: ${new Date().toLocaleString()}`;
+
+        // Скачиваем .txt файл
+        const blob = new Blob([text], { type: 'text/plain' });
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = `заявка_${Date.now()}.txt`;
+        link.click();
+
+        closeModal();
+        form.reset();
+
+        // Показываем спасибо через 3 сек
+        setTimeout(showThanksModal, 300);
+    });
+</script>
+	<footer style="background: #3c2c2c; color: white; padding: 20px 0; margin-top: 40px;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+        <div style="font-weight: bold;">EUPHORIA</div>
+        <div>
+            <a href="#" style="color: white; text-decoration: none; margin-left: 15px;">Заказать звонок</a>
+        </div>
+    </div>
+</footer>	
+
+</body>
+</html>

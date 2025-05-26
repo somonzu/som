@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Подарочные сертификаты | EUPHORIA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f7cac9;
+    }
+    .nav {
+      background: #3c2c2c;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+    }
+    .nav .callback-btn {
+      margin-right: auto;
+      font-weight: bold;
+      background: black;
+      padding: 5px 15px;
+      border-radius: 15px;
+    }
+    header {
+      text-align: center;
+      padding: 20px 0;
+      font-size: 32px;
+      color: black;
+      font-weight: bold;
+    }
+    .section-title {
+      text-align: center;
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+    .cert-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto 40px;
+    }
+    .cert-item {
+      max-width: 400px;
+      text-align: left;
+      position: relative;
+    }
+    .cert-item img {
+      width: 100%;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      transition: all 0.3s ease;
+      display: block;
+    }
+	.cert-item img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+    }
+    .gallery {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+    .gallery-title {
+      text-align: center;
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .gallery-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .gallery-grid img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+.gallery-grid img:hover {
+  transform: scale(1.03);
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  position: relative;
+    }
+    footer {
+      background: #3c2c2c;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="nav">
+    <a href="#" class="callback-btn">ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК</a>
+    <a href="index2.html">Услуги</a>
+    <a href="index.html">Мастера</a>
+    <a href="Cert.html">Сертификаты</a>
+  </div>
+
+  <header>EUPHORIA</header>
+
+  <div class="section-title">ПОДАРОЧНЫЕ СЕРТИФИКАТЫ</div>
+
+  <div class="cert-grid">
+    <div class="cert-item">
+      <img src="img/Card13.png" alt="Сертификат 1">
+      <p>Подарочный сертификат на любую сумму</p>
+    </div>
+    <div class="cert-item">
+      <img src="img/Card60.png" alt="Сертификат 2">
+      <p>Подарочный сертификат на определённую сумму + эскиз от мастера и одна коррекция</p>
+    </div>
+    <div class="cert-item">
+      <img src="img/Card14.png" alt="Сертификат 3">
+      <p>Подарочный сертификат на 10 000</p>
+    </div>
+  </div>
+
+  <div class="gallery">
+    <div class="gallery-title">ГАЛЕРЕЯ</div>
+    <div class="gallery-grid">
+      <img src="img/gal1.jpg" alt="Галерея 1">
+    </div>
+  </div>
+
+  <footer>
+    <div>EUPHORIA</div>
+    <div><a href="#" style="color:white; text-decoration: none;">Заказать обратный звонок</a></div>
+  </footer>
+
+</body>
+</html>
